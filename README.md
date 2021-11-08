@@ -33,3 +33,22 @@ Resume of (04/11/2021)
 - Think of an implementation of the graph
 - Think of a more suitable project goal (using the graph) than prediction (which can be done using NLP)
 - See how to connect wikidata search result to the dataset
+
+
+for next time:
+
+DEALING WITH DATA:
+- convert "remaining years" to "filtered_year.csv" and convert into pickle, faster to open
+
+WHAT IS IN THE DATA: (we will speak only about filtered data, not full)
+Quotations:
+- formats => provide a (df.dtypes) resume
+- distribution => provide histogram(x = nbr of quotations, y = nbr of speakers)
+- missing values => only some speaker are "None", they are handled by filtering rows with single QID
+
+ExtraFeatures:
+- formats => provide a (df.dtypes)
+- distribution => give information about occupancy
+- 
+
+
