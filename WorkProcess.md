@@ -104,4 +104,5 @@ List of internal milestones during these two weeks:
 - Upload everithing on Github
 
 Two notebooks are presented: 
-Main_Processing.ipynb contains the work on the quotes datasets
+
+1)Main_Processing.ipynb which contains the work on the quotes datasets
