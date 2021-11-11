@@ -26,9 +26,34 @@ After that, we perform a first analysis on the distribution of the number of quo
 
 By looking at this graph, we assume that # of quotation/person is enough for our purpose. Furthermore, year 2020 has "only" 6 chunks as it finishes in may **CORRECT ?**. The other years have about **INSERT** chunks.
 
+>That you can handle the data in its size. OK
+>That you understand what’s in the data (formats, distributions, missing values, correlations, etc.). OK
 
+### Additionnal features
 
-Here is how we would process:  
+We need to relate the `speaker` feature to its profession. This can be achived by using `speaker_attributes.parquet` and `wikidata_labels_descriptions_quotebank.csv`. `speaker_attributes.parquet` has a "occupation" column, which contains one or several wiki-Qids. We will translate those Qids into a profession using `wikidata_labels_descriptions_quotebank.csv`
+
+>That you considered ways to enrich, filter, transform the data according to your needs.OK 
+
+### Pipeline
+
+Setting the target. First, we will manually look at the unique professions of speakers. The list of professions can be obtained from the files in provided folder "speaker_attributes.parquet" in the "occupation" column, which contains the wiki-Qids. We will translate Qid into a profession using the provided file "wikidata_labels_descriptions_quotebank.csv". Next, we will highlight several of the most typical and popular professions from this list and manually combine related professions into one class (for example, combine a “biochemistry teacher” and a “physics teacher” into a “teacher” class). Let's say we get 10 classes. We will add an additional class “other”. Then we will define the vector of the target class using one-hot encoding - a vector of length 11.
+
+Setting the feature vector. We will use the pre-trained word vectors dictionary (for example, from “GloVe: Global Vectors for Word Representation” [https://nlp.stanford.edu/projects/glove/]) to convert words in a quote to a numeric vector. For one quote, we get one vector - the sum (or average) of the vectors in the quote. If a word is not in the dictionary, then we assign it a zero vector. To simplify the date we can limit the length of the quote vector by taking only the first few values (for example, 100).
+
+Setting the model. We will define a single-layer neural network with an input of dimension 100 and an output of dimension 11. At the output, we will use the softmax function, after which the output values will model the probability of a profession class.
+
+Model training. We will transform the files into one file, consisting of 112 columns: a column of quote ID, 100 columns - a vectorized quote, 11 columns - the target vector. Divide the file into train and test sets and balance the number of classes (remove several rows of the most popular classes so that the percentage of each class will be approximately the same). We will read training and test data by batch during model working. We will use cross-entropy loss as an optimized function, and will evaluate the model using the test set according to the accuracy metric.
+
+Change options in this system: Depending on the result, we can:
+
+    try to predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
+    change the number of predicted classes (the degree of grouping);
+    change the dimension of the feature vector for words (take a dimension greater than 100);
+    use NLP models with the attention mechanism to extract probably the most important words, which strengthen the model;
+    increase the complexity of our neural network by adding hidden layers to get more complex dependencies in the features;
+    use cross-validation to tune these parameters and get the best combination.
+
 
 
 
@@ -38,5 +63,12 @@ Here is how we would process:
     Proposed timeline
     Organization within the team: A list of internal milestones up until project Milestone 3.
     Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
+    
+    
+    
+    
+    That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook.
+    That your plan for analysis and communication is reasonable and sound, potentially discussing alternatives to your choices that you considered but dropped.
+
 
 Notebook containing initial analyses and data handling pipelines. We will grade the correctness, quality of code, and quality of textual descriptions.
