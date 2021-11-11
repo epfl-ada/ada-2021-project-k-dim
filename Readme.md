@@ -1,8 +1,6 @@
 # Title
 
 <img title="test" width="400px" src="test.jpg">
-<img title="test" width="400px" src="tenor.gif">
-
 
     Title
     Abstract: A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
