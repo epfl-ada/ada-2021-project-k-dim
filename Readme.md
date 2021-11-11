@@ -4,7 +4,7 @@
 
 Have you ever heard of [Catch Me If You Can](https://en.wikipedia.org/wiki/Catch_Me_If_You_Can) ? In this movie, the main character impersonates many professions mainly by appropriating their uniforms, specific behaviours and lingos, and everybody fall for it !  
 
-<img title="test" width="400px" src="img/tenor.gif">
+<img title="Do you concur ?" width="400px" src="img/tenor.gif">
 
 [source](https://media1.tenor.com/images/24eba459fc0a6e19c4d2d60ed678e2f9/tenor.gif?itemid=7219821)
 
@@ -20,7 +20,7 @@ As a first step we chose to filter out any quote whose `qids`.length != 1.
 
 As first analysis we want to know the distribution of the number of quote: 
 
-<img title="2020: first 500000 quotes" width="600px" src="img/2020first500000.PNG">
+<img title="2020: first 500000 quotes" width="400px" src="img/2020first500000.PNG">
 
 Here is how we would process:  
 
