@@ -1,6 +1,7 @@
 # Title
 
 <img title="test" width="400px" src="test.jpg">
+<img title="test" width="400px" src="tenor.gif">
 
 
     Title
