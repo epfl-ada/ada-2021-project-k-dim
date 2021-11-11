@@ -43,7 +43,11 @@ First, we select speakers with a sole profession. This is to ensure that a quote
 The final list is of size A+1, for A classes and an extra additional class “other”. Finally, we convert those classes to a vector using one-hot encoding.
 
 #### Features
-We will use a pre-trained word vectors dictionary (for example, from (“GloVe: Global Vectors for Word Representation”)[https://nlp.stanford.edu/projects/glove/] to convert words in a quote to a numeric vector. For one quote, we get one vector - the sum (or average) of the vectors in the quote. If a word is not in the dictionary, then we assign it a zero vector. To simplify the date we can limit the length of the quote vector by taking only the first few values (for example, 100).
+We will use a pre-trained word vectors dictionary (for example, from 
+
+(“GloVe: Global Vectors for Word Representation”)[https://nlp.stanford.edu/projects/glove/]
+
+to convert words in a quote to a numeric vector. For one quote, we get one vector - the sum (or average) of the vectors in the quote. If a word is not in the dictionary, then we assign it a zero vector. To simplify the date we can limit the length of the quote vector by taking only the first few values (for example, 100).
 
 Setting the model. We will define a single-layer neural network with an input of dimension 100 and an output of dimension 11. At the output, we will use the softmax function, after which the output values will model the probability of a profession class.
 
