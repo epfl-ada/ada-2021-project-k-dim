@@ -77,3 +77,27 @@ Depending on the result, we can:
 - increase the complexity of our neural network by adding hidden layers to get more complex dependencies in the features;
 - use cross-validation to tune these parameters and get the best combination.
 
+List of internal milestones during these two weeks:
+(02/11/2021)
+- Present the ideas of each member of the group submitted in Milestone 1 of the project
+- Discuss and choose the project idea
+
+(04/11/2021)
+- Start working on quotes of the year 2020
+- Understand the way to load the sample dataset given in Google colab into dataframe
+- Decide a proper pipeline for the project development
+
+(06/11/2021)
+- Find a way to connect wikidata search result to the dataset
+- Process the data in it's size, choose the best method of doing it
+
+(09/11/2021)
+- Present ways of dealing with missing values, see the formats and distribution of the data
+- Check the ways of implementing NLP for project idea
+- Try to analyze the additional dataset
+
+(11/11/2021)
+- Do the proper visualization of distributions chunk by chunk
+- Filter the needed data into new files for years 2015-2020
+- Write Readme
+- Upload everithing on Github
