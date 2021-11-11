@@ -38,7 +38,7 @@ We need to relate the `speaker` feature to its profession. This can be achived b
 ### Pipeline
 
 First, we select speakers with a sole profession. The selected profession are listed, and the list is manualy boiled down by:  
- a) selecting the most typical and popular professions 
+ a) selecting the most typical and popular professions  
  b) combining related professions into one class (for example, combine a “biochemistry teacher” and a “physics teacher” into a “teacher” class).
 
 Let's say we get 10 classes. We will add an additional class “other”. Then we will define the vector of the target class using one-hot encoding - a vector of length 11.
