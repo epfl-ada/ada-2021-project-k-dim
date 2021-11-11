@@ -14,7 +14,7 @@ From this observation, we would like to see if it possible to guess the professi
 ### A closer look at the data set 
 
 As a first step we chose to filter out any quote whose `qids`.length != 1. 
-* Why ? On one hand we get rid of the "homonym issue": _James Fisher_ is not unique, which leads to many qID. On the other hand, we deal with missing values: some speakers are "None".  By doing so we reduce the data size by **INSERT** %, which is acceptable.
+* Why ? On one hand we get rid of the "homonym issue": _James Fisher_ is not unique, which leads to many Qids. On the other hand, we deal with missing values: some speakers are "None".  By doing so we reduce the data size by **INSERT** %, which is acceptable.
 * How ? As the data size is far form greater than our RAM, we filtered out for each year "chunk by chunk" and store the result in 5 new csv files. We can work on those file by appliying the same method.
 >**add something about rate? sometimes even if proba <0.5, speaker is assigned (exemple:152638 in data extract)**
 
