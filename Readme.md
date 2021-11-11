@@ -37,7 +37,11 @@ We need to relate the `speaker` feature to its profession. This can be achived b
 
 ### Pipeline
 
-Setting the target. First, we will manually look at the unique professions of speakers. The list of professions can be obtained from the files in provided folder "speaker_attributes.parquet" in the "occupation" column, which contains the wiki-Qids. We will translate Qid into a profession using the provided file "wikidata_labels_descriptions_quotebank.csv". Next, we will highlight several of the most typical and popular professions from this list and manually combine related professions into one class (for example, combine a “biochemistry teacher” and a “physics teacher” into a “teacher” class). Let's say we get 10 classes. We will add an additional class “other”. Then we will define the vector of the target class using one-hot encoding - a vector of length 11.
+First, we select speakers with a sole profession. The selected profession are listed, and the list is manualy boiled down by:  
+ a) selecting the most typical and popular professions 
+ b) combining related professions into one class (for example, combine a “biochemistry teacher” and a “physics teacher” into a “teacher” class).
+
+Let's say we get 10 classes. We will add an additional class “other”. Then we will define the vector of the target class using one-hot encoding - a vector of length 11.
 
 Setting the feature vector. We will use the pre-trained word vectors dictionary (for example, from “GloVe: Global Vectors for Word Representation” [https://nlp.stanford.edu/projects/glove/]) to convert words in a quote to a numeric vector. For one quote, we get one vector - the sum (or average) of the vectors in the quote. If a word is not in the dictionary, then we assign it a zero vector. To simplify the date we can limit the length of the quote vector by taking only the first few values (for example, 100).
 
