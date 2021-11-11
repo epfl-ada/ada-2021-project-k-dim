@@ -18,6 +18,10 @@ As a first step we chose to filter out any quote whose `qids`.length != 1.
 * How ? As the data size is far form greater than our RAM, we filtered out for each year "chunk by chunk" and store the result in 5 new csv files. We can work on those file by appliying the same method.
 * >**add something about rate? sometimes even if proba <0.5, speaker is assigned (exemple:152638 in data extract)**
 
+As first analysis we want to know the distribution of the number of quote: 
+
+<img title="test" width="200px" src="img/test">
+
 Here is how we would process:  
 
 
