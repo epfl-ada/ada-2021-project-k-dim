@@ -69,3 +69,11 @@ Model training.
 We will transform the files into one file, consisting of 112 columns: a column of quote ID, 100 columns - a vectorized quote, 11 columns - the target vector. Divide the file into train and test sets and balance the number of classes (remove several rows of the most popular classes so that the percentage of each class will be approximately the same). We will read training and test data by batch during model working. We will use cross-entropy loss as an optimized function, and will evaluate the model using the test set according to the accuracy metric.
 
 Change options in this system:
+Depending on the result, we can:
+- try to predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
+- change the number of predicted classes (the degree of grouping);
+- change the dimension of the feature vector for words (take a dimension greater than 100);
+- use NLP models with the attention mechanism to extract probably the most important words, which strengthen the model;
+- increase the complexity of our neural network by adding hidden layers to get more complex dependencies in the features;
+- use cross-validation to tune these parameters and get the best combination.
+
