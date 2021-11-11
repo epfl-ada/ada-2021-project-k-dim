@@ -20,7 +20,7 @@ As a first step we chose to filter out any quote whose `qids`.length != 1.
 
 As first analysis we want to know the distribution of the number of quote: 
 
-<img title="test" width="200px" src="img/test.jpg">
+<img title="test" width="200px" src="img/2020first500000.PNG">
 
 Here is how we would process:  
 
