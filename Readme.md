@@ -11,6 +11,11 @@ Have you ever heard of [Catch Me If You Can](https://en.wikipedia.org/wiki/Catch
 For the uniform it is quite obvious, but what can we say about about the lingo ? One will agree that each occupation has its « proper words », but a person of a specific profession will also express himself in a certain manner. Think of a politician, she does not only speaks about economy and education, but also uses some figure of speech, and her discourse is fluid and well conducted (this might be hard to catch in a quote, but it is an example…).  
 From this observation, we would like to see if it possible to guess the profession of someone based on his quotation ?
 
+### A closer look at the data set 
+
+Here is how we would process:  
+
+
 
     Research Questions: A list of research questions you would like to address during the project.
     Proposed additional datasets (if any): List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
