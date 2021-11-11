@@ -102,3 +102,6 @@ List of internal milestones during these two weeks:
 - Filter the needed data into new files for years 2015-2020
 - Write Readme
 - Upload everithing on Github
+
+Two notebooks are presented: 
+Main_Processing.ipynb contains the work on the quotes datasets
