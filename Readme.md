@@ -13,6 +13,9 @@ From this observation, we would like to see if it possible to guess the professi
 
 ### A closer look at the data set 
 
+As a first step we chose to filter out any quote whose `qids`
+
+
 Here is how we would process:  
 
 
