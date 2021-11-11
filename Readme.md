@@ -36,12 +36,11 @@ We need to relate the `speaker` feature to its profession. This can be achived b
 >That you considered ways to enrich, filter, transform the data according to your needs.OK 
 
 ### Pipeline
-
-First, we select speakers with a sole profession. The selected profession are listed, and the list is manualy boiled down by:  
+#### target
+First, we select speakers with a sole profession. This is to ensure that a quote can be related to only one occupation. The selected profession are listed, and the list is manualy boiled down by:  
  a) selecting the most typical and popular professions  
  b) combining related professions into one class (for example, combine a “biochemistry teacher” and a “physics teacher” into a “teacher” class).
-
-Let's say we get 10 classes. We will add an additional class “other”. Then we will define the vector of the target class using one-hot encoding - a vector of length 11.
+The final list is of size A+1, for A classes and an extra additional class “other”. Finally, we convert those classes to a vector using one-hot encoding.
 
 Setting the feature vector. We will use the pre-trained word vectors dictionary (for example, from “GloVe: Global Vectors for Word Representation” [https://nlp.stanford.edu/projects/glove/]) to convert words in a quote to a numeric vector. For one quote, we get one vector - the sum (or average) of the vectors in the quote. If a word is not in the dictionary, then we assign it a zero vector. To simplify the date we can limit the length of the quote vector by taking only the first few values (for example, 100).
 
