@@ -78,6 +78,7 @@ Depending on the result, we can:
 - use cross-validation to tune these parameters and get the best combination.
 
 List of internal milestones during these two weeks:
+
 (02/11/2021)
 - Present the ideas of each member of the group submitted in Milestone 1 of the project
 - Discuss and choose the project idea
