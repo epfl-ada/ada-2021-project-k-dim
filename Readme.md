@@ -1,6 +1,10 @@
 # Quote Me If You Can
 
-Have you ever heard of [Catch Me If You Can](https://en.wikipedia.org/wiki/Catch_Me_If_You_Can) ? In this movies, the main character 
+Have you ever heard of [Catch Me If You Can](https://en.wikipedia.org/wiki/Catch_Me_If_You_Can) ? In this movie, the main character impersonates many professions by mainly using their uniform, specific behaviour and lingo, and everybody fall for it !  
+
+For the uniform it is quite obvious, but what about the lingo ? One will agree that each occupation has its « proper words », but a person of a specific profession will also express himself in a certain manner. Think of a politician, she does not only speaks about economy and education, but uses specific figure of speech, her discourse is fluid (this might be hard to catch in a quote, but it is an example…).
+From this observation, is it possible to guess the profession of someone based on its quotation ?
+
 
 <img title="test" width="400px" src="img/tenor.gif">
 
