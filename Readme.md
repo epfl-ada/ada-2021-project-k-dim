@@ -3,6 +3,7 @@
 Have you ever heard of [Catch Me If You Can](https://en.wikipedia.org/wiki/Catch_Me_If_You_Can) ? In this movie, the main character impersonates many professions by mainly using their uniform, specific behaviour and lingo, and everybody fall for it !  
 
 <img title="test" width="400px" src="img/tenor.gif">
+
 [source](https://media1.tenor.com/images/24eba459fc0a6e19c4d2d60ed678e2f9/tenor.gif?itemid=7219821)
 
 For the uniform it is quite obvious, but what about the lingo ? One will agree that each occupation has its « proper words », but a person of a specific profession will also express himself in a certain manner. Think of a politician, she does not only speaks about economy and education, but uses specific figure of speech, her discourse is fluid (this might be hard to catch in a quote, but it is an example…).
