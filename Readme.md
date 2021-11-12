@@ -58,6 +58,7 @@ What a nice model we got ! We got it because we chosen Qid with sole profession,
 * Try to predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
 
 ### MISSING
+**STORY**
 Research Questions: A list of research questions you would like to address during the project. **ALMOST**
 Proposed timeline **TODEFINE**
 Organization within the team: A list of internal milestones up until project Milestone 3. **SO ?**
