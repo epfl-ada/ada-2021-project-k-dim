@@ -61,5 +61,5 @@ What a nice model we got ! We got it because we chosen Qid with sole profession,
 
 Two notebooks are presented: 
 
-1) [code/Main_Processing](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/Main_Processing.ipynb) which contains the work on the quotes datasets
-2) [code/Wikidata_dataset](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/Wikidata_dataset.ipynb) which contains the work on the additional metadata on the speakers in the Quotebank dataset
+1) [/code/Main_Processing](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/Main_Processing.ipynb) which contains the work on the quotes datasets
+2) [/code/Wikidata_dataset](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/Wikidata_dataset.ipynb) which contains the work on the additional metadata on the speakers in the Quotebank dataset
