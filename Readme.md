@@ -40,7 +40,7 @@ The selected quotes are [lemmatized](https://pythonwife.com/lemmatization-in-nlp
 With the help of a neural network, we can link our D dimensionnal input vector to our C+1 dimensionnal output vector. Softmax is used as final activation, after which the output values will model the probability that the quote's speaker belongs to the predicted class.
 
 #### Train
-Our "pre-processed" data set has a `Qid` colum, D columns for the vectorized quote, C+1 columns for the corresponding one-hot label, and is of length N. Split it randomly into a train and test sets (depending on its size we could think of a validation set), and balance the number of classes (remove several rows of the most popular classes so that the percentage of each class will be approximately the same **Is it necessary ? We could use several strategy, look in paper for Quobert**). The train data is loaded by batch and cross-entropy loss is chosen (classification) as an optimized function, and will evaluate the model using the test set according to the accuracy metric.
+Our "pre-processed" data set has a `Qid` colum, D columns for the vectorized quote, C+1 columns for the corresponding one-hot label, and is of length N. Split it randomly into a train and test sets (depending on its size we could think of a validation set), **fill the balance thonfg**. The train data is loaded by batch and cross-entropy loss is chosen (classification) as an optimized function, and will evaluate the model using the test set according to the accuracy metric.
 
 ### Result
 What a nice model we got ! We got it because we chosen Qid with sole profession, remeber ? At this stage we could see if our model works, or not. But let's assume it works.  
