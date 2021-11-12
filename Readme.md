@@ -11,16 +11,16 @@ From this observation, we would like to see if it is possible to guess the profe
 
 ### A closer look at the dataset 
 
-As a first step we chose to filter out any quote whose `qids`.length != 1. 
+First, we chose to filter out any quote whose `qids`.length != 1. 
 * Why ? On one hand we get rid of the "homonym issue": _James Fisher_ is not unique, which leads to many Qids. On the other hand, we deal with missing values: some speakers are "None".  By doing so, we reduce the data size by 50%. For a full year, we have in average 22 million quotes. It then remains 11 million quotes per year, which should be enough.  
 Sometimes even if argmax(Probability(speaker)) < 0.5, a speaker is still assigned. We didn't care about that at first glance, since it happens that argmax(Probability(speaker)) > 0.75 but assigned speaker is wrong. 
 * How ? As the data size is not fitting our RAM, we filtered out for each year "chunk by chunk" and store the result in 5 new csv files. We can work on those file by appliying the same method.
 
-After that, we perform a first analysis on the distribution of the number of quote. We show here the distribution of the number of quotations per speaker among year 2020, for chunk 1/6. Each chunk is of size 500,000. The distribution is assumed similar for all chunks: 
+After, we perform a first analysis on the distribution of the number of quote. We show here the distribution of the number of quotations/speaker among year 2020, for chunk 1/6. Each chunk is of size 500,000. The distribution is assumed similar for all chunks: 
 
 <img title="2020: first 500000 quotes" width="400px" src="img/2020first500000.PNG">
 
-By looking at this graph, we assume that the number of quotation per person is enough for our purpose. Furthermore, year 2020 has "only" 6 chunks as it finishes in april. The other years have about 20 chunks.
+Looking at this graph, we assume that the number of quotation/person is enough for our purpose. Furthermore, year 2020 has "only" 6 chunks as it finishes in april. The other years have about 20 chunks.
 
 ### Additional features
 
@@ -45,14 +45,14 @@ Eventually, we will take into consideration that we might encounter an unbalance
 
 ### Result
 What a nice model we got ! We got it because we have chosen Qids with sole profession, remember ? At this stage we could see if our model works, or not. But let's assume it works !
-* Let's consider now Qids with multiple professions, we won't dive into a multiclass neural network but, by looking at the quotes of the person per year or month (depending on available data), is it possible to predict what profession the person was excercing _by this time_?
+* Let's consider now Qids with multiple professions, we won't dive into a multiclass neural network but, by looking at the quotes of the person/year, is it possible to predict what profession the person was excercing _by this time_?
 * Can we use our model to assign a word, or collection of words to a class ? 
 * Can we predict another target of a speaker: other features in the provided folder "speaker_attributes.parquet" (e.g. “nationality”, “gender”, etc)?
 
 ### Planning
 #### During Milestone 2
 * Ivan: handle data in its size.
-* Konstantin: explore additional dataset and looks for NLP methods: word emmbedings.
+* Konstantin: explore additional dataset and look for NLP methods: word emmbedings.
 * Mohamed: explore feasability of alternative ideas that we finally dropped (Social quotes, graph implementation).
 * David: explore NLP methods: stemming and lemmatization, redaction of Readme.md.
 
