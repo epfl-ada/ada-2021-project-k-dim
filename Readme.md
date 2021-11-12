@@ -36,18 +36,20 @@ We need to relate the `speaker` feature to its profession. This can be achived b
 >That you considered ways to enrich, filter, transform the data according to your needs.OK 
 
 ### Pipeline
-#### Target
-First, we select speakers with a sole profession (this is about 88% of `occupation`). This is to ensure that a quote can be related to only one occupation. The selected profession are listed, and the list is manualy boiled down by:  
+#### Targets
+We select speakers with a sole profession (this is about 88% of `occupation`). This is to ensure that a quote can be related to only one occupation. The selected profession are listed, and the list is manualy boiled down by:  
  a) selecting the most typical and popular professions  
  b) combining related professions into one class (for example, combine a “biochemistry teacher” and a “physics teacher” into a “teacher” class).
-The final list is of size A+1, for A classes and an extra additional class “other”. Finally, we convert those classes to a vector using one-hot encoding.
+The final list is of size C+1, for C classes and an extra additional class “other”. Finally, we convert those classes to a vector using one-hot encoding.
 
 #### Features
-We will use a pre-trained word vectors dictionary (for example, from [“GloVe: Global Vectors for Word Representation”](https://nlp.stanford.edu/projects/glove/)) to convert words in a quote to a numeric vector. For one quote, we get one vector - the sum (or average) of the vectors in the quote. If a word is not in the dictionary, then we assign it a zero vector. To simplify the date we can limit the length of the quote vector by taking only the first few values (for example, 100).
+The selected quotes are [lemmatized](https://pythonwife.com/lemmatization-in-nlp/) by using [spaCy](https://spacy.io/). The resulting lists are then converted to a collection of numeric vector by means of a pre-trained word vectors dictionary (for example, from [“GloVe: Global Vectors for Word Representation”](https://nlp.stanford.edu/projects/glove/)). If a word is not in the dictionary, a zero vector is assign. Finally, by summing the vectors together, we get one vector per quote. As this vector is high dimensional, **a source here ? How many dimension ?** we can limit the length of the quote vector by taking only the first D values. This _could_ avoid overfitting or provoke underfitting. An optimal D could be selected through a cross validation procedure on a reduced data set. 
 
-Setting the model. We will define a single-layer neural network with an input of dimension 100 and an output of dimension 11. At the output, we will use the softmax function, after which the output values will model the probability of a profession class.
+#### Model
+With the help of a neural network, we can link our D dimensionnal input vector to our C+1 dimensionnal output vector. Softmax is used as final activation, after which the output values will model the probability that the quote's speaker belongs to the predicted class.
 
-Model training. We will transform the files into one file, consisting of 112 columns: a column of quote ID, 100 columns - a vectorized quote, 11 columns - the target vector. Divide the file into train and test sets and balance the number of classes (remove several rows of the most popular classes so that the percentage of each class will be approximately the same). We will read training and test data by batch during model working. We will use cross-entropy loss as an optimized function, and will evaluate the model using the test set according to the accuracy metric.
+#### Train
+We will transform the files into one file, consisting of 112 columns: a column of quote ID, 100 columns - a vectorized quote, 11 columns - the target vector. Divide the file into train and test sets and balance the number of classes (remove several rows of the most popular classes so that the percentage of each class will be approximately the same). We will read training and test data by batch during model working. We will use cross-entropy loss as an optimized function, and will evaluate the model using the test set according to the accuracy metric.
 
 Change options in this system: Depending on the result, we can:
 
