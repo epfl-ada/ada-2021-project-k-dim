@@ -56,6 +56,6 @@ What a nice model we got ! We got it because we chosen Qid with sole profession,
 * David: explore NLP methods: stemming and lemmatization, redaction of Readme.md.
 
 #### Up until Milestone 3
-Ivan, David: merge additional dataset with the quote and get the lemmatization process working.
-Mohamed, Konstantin: prepare the occupation clusters.
+* Ivan, David: merge additional dataset with the quote and get the lemmatization process working.
+* Mohamed, Konstantin: prepare the occupation clusters.
 
