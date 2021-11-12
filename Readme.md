@@ -59,3 +59,4 @@ What a nice model we got ! We got it because we chosen Qid with sole profession,
 * Ivan, David: merge additional dataset with the quote and get the lemmatization process working.
 * Mohamed, Konstantin: prepare the occupation clusters.
 
+PS: There is two 
