@@ -45,8 +45,8 @@ Our "pre-processed" data set has a `Qid` colum, D columns for the vectorized quo
 ### Result
 What a nice model we got ! We got it because we chosen Qid with sole profession, remember ? At this stage we could see if our model works, or not. But let's assume it works.  
 * Let's consider now Qid with multiple profession, we won't dive into a multiclass neural network but, by looking a the quotes of the person per year or month (depending on available data), is it possible to predict what profession the person was excercing _by this time_?
-* Multiclass Neural Network: can we reverse the process ? Can we choose a class as input and, predict a collection of word related to this class ? (unsupervised)
-* Try to predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
+* Can we use our model to assign a word, or collection collection of word to a class ? 
+* Can we predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
 
 ### MISSING
 **STORY**  
