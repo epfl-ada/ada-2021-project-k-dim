@@ -28,7 +28,7 @@ We need to relate the `speaker` feature to its profession. This can be achived b
 
 ### Pipeline
 #### Targets
-We select speakers with a sole profession (this is about 88% of `occupation`). This is to ensure that a quote can be related to only one occupation. The selected profession are listed, and the list is manualy boiled down by:  
+We select speakers with a sole profession (about 88% of `occupation`). This is to ensure that a quote can be related to only one occupation. The selected profession are listed, and the list is manualy boiled down by:  
  a) selecting the most typical and popular professions  
  b) combining related professions into one class (for example, combine a “biochemistry teacher” and a “physics teacher” into a “teacher” class).
 The final list is of size C+1, for C classes and an extra additional class “other”. Finally, we convert those classes to a vector using one-hot encoding.
