@@ -43,8 +43,8 @@ With the help of a neural network, we can link our D dimensionnal input vector t
 Our "pre-processed" data set has a `Qid` colum, D columns for the vectorized quote, C+1 columns for the corresponding one-hot label, and is of length N. Split it randomly into a train and test sets (depending on its size we could think of a validation set), **fill the balance thonfg**. The train data is loaded by batch and cross-entropy loss is chosen (classification) as an optimized function, and will evaluate the model using the test set according to the accuracy metric.
 
 ### Result
-What a nice model we got ! We got it because we chosen Qid with sole profession, remeber ? At this stage we could see if our model works, or not. But let's assume it works.  
-* Let's consider now Qid with multiple profession, we won't dive into a multiclass neural network but, by looking a the quotes of the person per year or month (depending on available data), we could predict what profession the persone was excercing _by this time_.
+What a nice model we got ! We got it because we chosen Qid with sole profession, remember ? At this stage we could see if our model works, or not. But let's assume it works.  
+* Let's consider now Qid with multiple profession, we won't dive into a multiclass neural network but, by looking a the quotes of the person per year or month (depending on available data), is it possible to predict what profession the person was excercing _by this time_?
 * Multiclass Neural Network: can we reverse the process ? Can we choose a class as input and, predict a collection of word related to this class ? (unsupervised)
 * Try to predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
 
