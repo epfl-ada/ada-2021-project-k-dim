@@ -13,10 +13,10 @@ From this observation, we would like to see if it possible to guess the professi
 
 As a first step we chose to filter out any quote whose `qids`.length != 1. 
 * Why ? On one hand we get rid of the "homonym issue": _James Fisher_ is not unique, which leads to many Qids. On the other hand, we deal with missing values: some speakers are "None".  By doing so we reduce the data size by 50%. For a full year, we have in average 22 million quotes. It then remains 11 million quotes per year, which should be enough.  
-Sometimes even if argmax(Probability(speaker)) < 0.5, a speaker is still assigned. We did not care about that at first glance, since it happens that  argmax(Probability(speaker)) > 0.75 but assigned speaker is still wrong. 
-* How ? As the data size is far form greater than our RAM, we filtered out for each year "chunk by chunk" and store the result in 5 new csv files. We can work on those file by appliying the same method.
+Sometimes even if argmax(Probability(speaker)) < 0.5, a speaker is still assigned. We didn't care about that at first glance, since it happens that  argmax(Probability(speaker)) > 0.75 but assigned speaker is wrong. 
+* How ? As the data size is not fitting our RAM, we filtered out for each year "chunk by chunk" and store the result in 5 new csv files. We can work on those file by appliying the same method.
 
-After that, we perform a first analysis on the distribution of the number of quote. We show here the distribution of # of quotations/speaker among year 2020, for chunk 1 out of 6. Each chunk is of size 500,000. The distribution is assumed similar for all chunks: 
+After that, we perform a first analysis on the distribution of the number of quote. We show here the distribution of # of quotations/speaker among year 2020, for chunk 1/6. Each chunk is of size 500,000. The distribution is assumed similar for all chunks: 
 
 <img title="2020: first 500000 quotes" width="400px" src="img/2020first500000.PNG">
 
@@ -24,7 +24,7 @@ By looking at this graph, we assume that # of quotation/person is enough for our
 
 ### Additional features
 
-We need to relate the `speaker` feature to its profession. This can be achived by using `speaker_attributes.parquet` and `wikidata_labels_descriptions_quotebank.csv`. `speaker_attributes.parquet` has a `occupation` column, which contains one or several wiki-Qids. We will translate those Qids into a profession using `wikidata_labels_descriptions_quotebank.csv`
+We need to relate the `speaker` feature to its profession. This can be achived by using `speaker_attributes.parquet` and `wikidata_labels_descriptions_quotebank.csv`. `speaker_attributes.parquet` has a `occupation` column, which contains one or several wiki-Qids. We will translate those into a profession using `wikidata_labels_descriptions_quotebank.csv`
 
 ### Pipeline
 #### Targets
@@ -46,7 +46,7 @@ Our "pre-processed" dataset has a `Qid` colum, D columns for the vectorized quot
 What a nice model we got ! We got it because we chosen Qid with sole profession, remember ? At this stage we could see if our model works, or not. But let's assume it works.  
 * Let's consider now Qid with multiple profession, we won't dive into a multiclass neural network but, by looking a the quotes of the person per year or month (depending on available data), is it possible to predict what profession the person was excercing _by this time_?
 * Can we use our model to assign a word, or collection of words to a class ? 
-* Can we predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on) ?
+* Can we predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (e.g. “nationality”, “gender”, etc)?
 
 ### Planning
 #### During Milestone 2
