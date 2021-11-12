@@ -1,7 +1,5 @@
 # Quote Me If You Can
 
->**TO REMOVE Abstract: A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?**
-
 Have you ever heard of [Catch Me If You Can](https://en.wikipedia.org/wiki/Catch_Me_If_You_Can) ? In this movie, the main character impersonates many professions mainly by appropriating their uniforms, specific behaviours and lingos, and everybody fall for it !  
 
 <img title="Do you concur ?" width="400px" src="img/tenor.gif">
@@ -15,9 +13,8 @@ From this observation, we would like to see if it possible to guess the professi
 
 As a first step we chose to filter out any quote whose `qids`.length != 1. 
 * Why ? On one hand we get rid of the "homonym issue": _James Fisher_ is not unique, which leads to many Qids. On the other hand, we deal with missing values: some speakers are "None".  By doing so we reduce the data size by 50%. For a full year, we have in average 22 million quotes. It then remains 11 million quotes per year, which should be enough.  
-Sometimes even if argmax(Probability(speaker))<0.5 a speaker is still assign. We did not care about that at first glance since it appends that  argmax(Probability(speaker))>0.95 but assigned speaker is still wrong. 
+Sometimes even if argmax(Probability(speaker)) < 0.5, a speaker is still assigned (index 152638 in data extract). We did not care about that at first glance, since it happens that  argmax(Probability(speaker)) > 0.75 but assigned speaker is still wrong. 
 * How ? As the data size is far form greater than our RAM, we filtered out for each year "chunk by chunk" and store the result in 5 new csv files. We can work on those file by appliying the same method.
->**add something about rate? sometimes even if proba <0.5, speaker is assigned (exemple:152638 in data extract)**
 
 After that, we perform a first analysis on the distribution of the number of quote. We show here the distribution of # of quotations/speaker among year 2020, for chunk 1 out of 6. Each chunk is of size 500,000. The distribution is assumed similar for all chunks: 
 
@@ -25,14 +22,9 @@ After that, we perform a first analysis on the distribution of the number of quo
 
 By looking at this graph, we assume that # of quotation/person is enough for our purpose. Furthermore, year 2020 has "only" 6 chunks as it finishes in april. The other years have about 20 chunks.
 
->That you can handle the data in its size. OK
->That you understand what’s in the data (formats, distributions, missing values, correlations, etc.). OK
-
 ### Additionnal features
 
 We need to relate the `speaker` feature to its profession. This can be achived by using `speaker_attributes.parquet` and `wikidata_labels_descriptions_quotebank.csv`. `speaker_attributes.parquet` has a `occupation` column, which contains one or several wiki-Qids. We will translate those Qids into a profession using `wikidata_labels_descriptions_quotebank.csv`
-
->That you considered ways to enrich, filter, transform the data according to your needs.OK 
 
 ### Pipeline
 #### Targets
