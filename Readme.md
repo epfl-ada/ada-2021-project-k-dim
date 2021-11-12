@@ -58,13 +58,13 @@ What a nice model we got ! We got it because we chosen Qid with sole profession,
 * Try to predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
 
 ### MISSING
-**STORY**
-Research Questions: A list of research questions you would like to address during the project. **ALMOST**
-Proposed timeline **TODEFINE**
-Organization within the team: A list of internal milestones up until project Milestone 3. **SO ?**
-Questions for TAs (optional): Add here any questions you have for us related to the proposed project. **ANY ?**
+**STORY**  
+Research Questions: A list of research questions you would like to address during the project. **ALMOST**  
+Proposed timeline **TODEFINE**  
+Organization within the team: A list of internal milestones up until project Milestone 3. **SO ?**  
+Questions for TAs (optional): Add here any questions you have for us related to the proposed project. **ANY ?**  
     
-That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook. OK?...
-That your plan for analysis and communication is reasonable and sound, **potentially discussing alternatives to your choices that you considered but dropped.**
+That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook. OK?...  
+That your plan for analysis and communication is reasonable and sound, **potentially discussing alternatives to your choices that you considered but dropped.**  
     
 Notebook containing initial analyses and data handling pipelines. We will grade the correctness, quality of code, and quality of textual descriptions. **YES ?**
