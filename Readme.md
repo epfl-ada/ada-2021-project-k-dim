@@ -49,32 +49,21 @@ The selected quotes are [lemmatized](https://pythonwife.com/lemmatization-in-nlp
 With the help of a neural network, we can link our D dimensionnal input vector to our C+1 dimensionnal output vector. Softmax is used as final activation, after which the output values will model the probability that the quote's speaker belongs to the predicted class.
 
 #### Train
-Our "pre-processed" data set has a `Qid` colum, D columns for the vectorized quote, C+1 columns for the corresponding one-hot label, and is of length N. Split it randomly into a train and test sets (depending on its size we could think of a validation set), and balance the number of classes (remove several rows of the most popular classes so that the percentage of each class will be approximately the same**Is it necessary ? We could use several strategy, look in paper for Quobert**). The train data is loaded by batch and cross-entropy loss is chosen (classification) as an optimized function (classification), and will evaluate the model using the test set according to the accuracy metric.
+Our "pre-processed" data set has a `Qid` colum, D columns for the vectorized quote, C+1 columns for the corresponding one-hot label, and is of length N. Split it randomly into a train and test sets (depending on its size we could think of a validation set), and balance the number of classes (remove several rows of the most popular classes so that the percentage of each class will be approximately the same **Is it necessary ? We could use several strategy, look in paper for Quobert**). The train data is loaded by batch and cross-entropy loss is chosen (classification) as an optimized function, and will evaluate the model using the test set according to the accuracy metric.
 
-Change options in this system: Depending on the result, we can:
+### Result
+What a nice model we got ! We got it because we chosen Qid with sole profession, remeber ? At this stage we could see if our model works, or not. But let's assume it works.  
+* Let's consider now Qid with multiple profession, we won't dive into a multiclass neural network but, by looking a the quotes of the person per year or month (depending on available data), we could predict what profession the persone was excercing _by this time_.
+* Multiclass Neural Network: can we reverse the process ? Can we choose a class as input and, predict a collection of word related to this class ? (unsupervised)
+* Try to predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
 
-    try to predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
-    change the number of predicted classes (the degree of grouping);
-    change the dimension of the feature vector for words (take a dimension greater than 100);
-    use NLP models with the attention mechanism to extract probably the most important words, which strengthen the model;
-    increase the complexity of our neural network by adding hidden layers to get more complex dependencies in the features;
-    use cross-validation to tune these parameters and get the best combination.
-
-
-
-
-    Research Questions: A list of research questions you would like to address during the project.
-    Proposed additional datasets (if any): List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
-    Methods
-    Proposed timeline
-    Organization within the team: A list of internal milestones up until project Milestone 3.
-    Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
+### MISSING
+Research Questions: A list of research questions you would like to address during the project. **ALMOST**
+Proposed timeline **TODEFINE**
+Organization within the team: A list of internal milestones up until project Milestone 3. **SO ?**
+Questions for TAs (optional): Add here any questions you have for us related to the proposed project. **ANY ?**
     
+That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook. OK?...
+That your plan for analysis and communication is reasonable and sound, **potentially discussing alternatives to your choices that you considered but dropped.**
     
-    
-    
-    That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook.
-    That your plan for analysis and communication is reasonable and sound, potentially discussing alternatives to your choices that you considered but dropped.
-
-
-Notebook containing initial analyses and data handling pipelines. We will grade the correctness, quality of code, and quality of textual descriptions.
+Notebook containing initial analyses and data handling pipelines. We will grade the correctness, quality of code, and quality of textual descriptions. **YES ?**
