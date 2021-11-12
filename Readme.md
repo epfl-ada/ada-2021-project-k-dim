@@ -46,13 +46,13 @@ Our "pre-processed" dataset has a `Qid` colum, D columns for the vectorized quot
 What a nice model we got ! We got it because we chosen Qid with sole profession, remember ? At this stage we could see if our model works, or not. But let's assume it works.  
 * Let's consider now Qid with multiple profession, we won't dive into a multiclass neural network but, by looking a the quotes of the person per year or month (depending on available data), is it possible to predict what profession the person was excercing _by this time_?
 * Can we use our model to assign a word, or collection of words to a class ? 
-* Can we predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on);
+* Can we predict another target of a speaker: other columns in the files in the provided folder "speaker_attributes.parquet" (for example, “nationality”, “gender”, “ethnic_group” and so on) ?
 
 ### Planning
 #### During Milestone 2
-* Ivan: handle data in its size  
-* Konstantin: explore additional dataset and looks for NLP methods: word emmbedings
-* Mohamed: explore feasability of alternative ideas that we finally dropped (Social quotes, graph implementation)
+* Ivan: handle data in its size.
+* Konstantin: explore additional dataset and looks for NLP methods: word emmbedings.
+* Mohamed: explore feasability of alternative ideas that we finally dropped (Social quotes, graph implementation).
 * David: explore NLP methods: stemming and lemmatization, redaction of Readme.md.
 
 #### Up until Milestone 3
