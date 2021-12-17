@@ -66,4 +66,4 @@ After several training trials we found that weighted loss does not fully prevent
 2) [Milestone2_wikidata](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/code/Milestone_2/Milestone2_wikidata.ipynb), which contains the work on the additional metadata on the speakers in the Quotebank dataset from milestone 2.
 3) [Data_Processing](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/code/Milestone_3/Data_Processing.ipynb) which contains additional datasets preparation, merging the occupations to the original data and graph plotting from Milestone 3.
 4) [Clusterization]()
-5) [Model](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/code/Milestone_3/Model.ipynb) which contains our model description, creating balanced train and test datasets and model training. 
+5) [Model](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/code/Milestone_3/Model.ipynb) which contains our model description, creating balanced train and test datasets, and model training. 
