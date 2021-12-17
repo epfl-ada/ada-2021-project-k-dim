@@ -40,11 +40,11 @@ Second, from the additional datasets we take only those people who has distinct 
 After obtaining clusterized occupations, we merge this information to the original quotes dataset and process it to the model.
 #### Model
 
-We used pretrained BERT-Base model (BertTokenizer and BertModel with 768 hidden layers, introduced in [https://arxiv.org/abs/1810.04805]). We add one fully connected layer with 10 output dimensions. BertTokenizer transforms input string into tokens for BertModel, then BertModel returns 768-dimensional representation of input string. Next, added layer produce 10 values which after applying sigmoid function predict the probabilities of each class.
+We used pretrained BERT-Base model (BertTokenizer and BertModel with 768 hidden layers, introduced in [https://arxiv.org/abs/1810.04805]). We add one fully connected layer with 10 output dimensions. BertTokenizer transforms input string into tokens, then BertModel returns 768-dimensional representation of input string. Further, added layer produce 10 values which after applying sigmoid function predict the probabilities of each class.
 
-The weighted binary cross entropy was used as a loss function. The weights were used to decrease the effect of data unbalancing. The weights were computed as normalized reverse frequencies of classes in train data.
+The weighted binary cross entropy was used as a loss function. The weights were used to decrease the effect of unbalanced data. The weights were computed as normalized reverse frequencies of classes in the train data.
 
-For transformer-based models, it is convenient to use a schedular which changes learning rate during training to make training more smooth: smoothly increases the learning rate from zero to set value during warmup training period and smoothly decrease it to zero for last part of training period. We used linear schedular with warmup period equals to first 10% of total training steps.
+For transformer-based models, it is convenient to use a schedular which changes learning rate during training to make training more smooth: smoothness increases the learning rate from zero to set value during warmup training period and smoothly decrease it to zero for last part of training. We used linear schedular with warmup period equals to first 10% of total training steps.
 
 After several training trials we found that weighted loss does not fully prevent overfitting to the most frequent classes. For training the final model, we decided to create fully balanced train and test datasets.
 
