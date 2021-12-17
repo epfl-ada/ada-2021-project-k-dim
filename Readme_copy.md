@@ -19,6 +19,7 @@ A list of research questions we would like to address during the project:
 * Is it possible to get the profession of the person based on his/her quotes?
 * What are the most cited occupation clusters in the journals?
 * Can we predict another target of a speaker: other features in the provided folder "speaker_attributes.parquet" (e.g. “nationality”, “gender”, etc)?
+* By looking at the quotes of the person/year, is it possible to predict what profession the person was excercing by this time?
 
 
 ## Dataset 
