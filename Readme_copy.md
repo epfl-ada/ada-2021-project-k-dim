@@ -13,7 +13,7 @@ Have you ever heard of [Catch Me If You Can](https://en.wikipedia.org/wiki/Catch
 For the uniform it is quite obvious, but what can we say about the lingo ? One will agree that each occupation has its « proper words », but a person of a specific profession will also express himself in a certain manner. Think of a politician, she does not only speaks about economy and education, but also uses some figure of speech, and her discourse is fluid and well conducted (this might be hard to catch in a quote, but it is an example).  
 From this observation, we would like to see if it is possible to guess the profession of someone based on his quotations ?
 
-## Research Questions(To change!)
+## Research Questions
 
 A list of research questions we would like to address during the project:
 * Is it possible to get the profession of the person based on his/her quotes?
