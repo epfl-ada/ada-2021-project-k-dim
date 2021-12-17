@@ -1,6 +1,6 @@
 # Title: Quote Me If You Can
 
-[Here is the data story]()
+[Here is the Data story]()
 
 ## Abstract
 
