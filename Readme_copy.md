@@ -28,7 +28,9 @@ A list of research questions we would like to address during the project:
 
 #### Pre-processing
 First, we chose to filter out any quote whose qids.length != 1. On one hand we get rid of the "homonym issue": James Fisher is not unique, which leads to many Qids. On the other hand, we deal with missing values: some speakers are "None". By doing so, we reduce the data size by 50%. For a full year, we have in average 22 million quotes. It then remains 11 million quotes per year, which should be enough.
+
 Second, from the additional datasets we take only those people who has distinct occupation. This is for proper model training process, so it will be able to distinguish one job from another. Other rows with several occupations may be used for training, because the designed model will output probabilities of a person assigned to each of the cluster.
+
 After receiving clusterized occupations, we merge this information to the original quotes dataset and process it to the model.
 
 #### Clustering
