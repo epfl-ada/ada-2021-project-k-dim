@@ -27,7 +27,7 @@ A list of research questions we would like to address during the project:
 * The full dataset is made of 178 million quotations together with a list of possible speaker ranked by probability, the name of the most probable speaker and its Wikidata Qid, when it has been published, and where it has been published. The later is important because this information has been exctracted out of 162 million English news articles published between 2008 and 2020 included, so one might want to keep records of it.
 * We need to relate the `speaker` feature to its profession. This can be achived by using `speaker_attributes.parquet` and `wikidata_labels_descriptions_quotebank.csv`. `speaker_attributes.parquet` has a `occupation` column, which contains one or several wiki-Qids. We will translate those into a profession using `wikidata_labels_descriptions_quotebank.csv`
 
-## Methods(To change what is below!)
+## Methods
 
 #### Pre-processing
 First, we chose to filter out any quote whose qids.length != 1. On one hand we get rid of the "homonym issue": James Fisher is not unique, which leads to many Qids. On the other hand, we deal with missing values: some speakers are "None". By doing so, we reduce the data size by 50%. For a full year, we have in average 22 million quotes. It then remains 11 million quotes per year, which should be enough.
