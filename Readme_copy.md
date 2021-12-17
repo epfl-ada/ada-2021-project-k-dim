@@ -25,24 +25,18 @@ A list of research questions we would like to address during the project:
 * We need to relate the `speaker` feature to its profession. This can be achived by using `speaker_attributes.parquet` and `wikidata_labels_descriptions_quotebank.csv`. `speaker_attributes.parquet` has a `occupation` column, which contains one or several wiki-Qids. We will translate those into a profession using `wikidata_labels_descriptions_quotebank.csv`
 
 ### Methods(To change what is below!)
-'structure below text in methods and update them'
 
-### Pipeline
-#### Targets
-We select speakers with a sole profession (about 88% of `occupation`). This is to ensure that a quote can be related to only one occupation. The selected profession are listed, and the list is manualy boiled down by:  
- a) selecting the most typical and popular professions  
- b) combining related professions into one class (e.g. combine a “biochemistry teacher” and a “physics teacher” into a “teacher” class).
-The final list is of size C+1, for C classes and an extra additional class “other” which contains the remaining professions. Finally, we convert those classes to a vector using one-hot encoding.
+#### Pre-processing
 
-#### Features
-The selected quotes are [lemmatized](https://pythonwife.com/lemmatization-in-nlp/) using [spaCy](https://spacy.io/) (see [alternatives](https://www.analyticsvidhya.com/blog/2020/08/top-4-sentence-embedding-techniques-using-python/)). The resulting lists are then converted to a collection of numeric vector by means of a pre-trained word vectors dictionary (e.g. from [“GloVe: Global Vectors for Word Representation”](https://nlp.stanford.edu/projects/glove/)). If a word is not in the dictionary, a vector of zeros is assigned. Finally, by summing the vectors together, we get one vector per quote. As this vector is high dimensional (dim=300), we can limit the length of the quote vector by taking only the first D values. This _could_ avoid overfitting or provoke underfitting. An optimal D could be selected through a cross validation procedure on a reduced dataset. 
+
+#### Clustering
+
 
 #### Model
-With the help of a neural network, we can link our D dimensionnal input vector to our C+1 dimensionnal output vector. Softmax is used as final activation function, after which the output values will model the probability that the quote's speaker belongs to the predicted class.
+
 
 #### Train
-Our "pre-processed" dataset has a `Qid` colum, D columns for the vectorized quote, C+1 columns for the corresponding one-hot label, and is of length N. In order to define both train and test sets, we follow the 80%-20% rule. The train data is loaded by batch and cross-entropy loss is chosen (classification) as an optimized function, and will evaluate the model using the test set according to the accuracy metric.
-Eventually, we will take into consideration that we might encounter an unbalanced data issue, since we will have C+1 classes among the data.
+
 
 
 ### Proposed timeline
