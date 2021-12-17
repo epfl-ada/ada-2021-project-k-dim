@@ -42,7 +42,7 @@ We clustered the occupations 4 times:
 3)	20 clusters were reduced to 10 by merging the existed with similar ones. This was to check model behavior on less classes.
 4)	Into 10 by clusters using machine learning algorithm with the whole occupations list given.
 
-After obtaining clusterized occupations, we merge this information to the original quotes dataset and process it to the model.
+After each obtained clusterized occupations, we merged this information to the original quotes dataset and processed it to the model.
 #### Model
 
 We used pretrained BERT-Base model (BertTokenizer and BertModel with 768 hidden layers, introduced in [this paper](https://arxiv.org/abs/1810.04805)). We add one fully connected layer with 10 output dimensions. BertTokenizer transforms input string into tokens, then BertModel returns 768-dimensional representation of input string. Further, added layer produce 10 values which after applying sigmoid function predict the probabilities of each class.
