@@ -1,6 +1,6 @@
 # Title: Quote Me If You Can
 
-[Here is the Data story](https://quote-me-if-you-can.github.io/)
+[Here is the Data story](https://quote-me-if-you-can.github.io/)!
 
 ## Abstract
 
