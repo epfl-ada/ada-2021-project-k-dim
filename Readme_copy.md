@@ -40,7 +40,7 @@ Second, from the additional datasets we take only those people who has distinct 
 After obtaining clusterized occupations, we merge this information to the original quotes dataset and process it to the model.
 #### Model
 
-We used pretrained BERT-Base model (BertTokenizer and BertModel with 768 hidden layers, introduced in [https://arxiv.org/abs/1810.04805]). We add one fully connected layer with 10 output dimensions. BertTokenizer transforms input string into tokens, then BertModel returns 768-dimensional representation of input string. Further, added layer produce 10 values which after applying sigmoid function predict the probabilities of each class.
+We used pretrained BERT-Base model (BertTokenizer and BertModel with 768 hidden layers, introduced in [this paper](https://arxiv.org/abs/1810.04805)). We add one fully connected layer with 10 output dimensions. BertTokenizer transforms input string into tokens, then BertModel returns 768-dimensional representation of input string. Further, added layer produce 10 values which after applying sigmoid function predict the probabilities of each class.
 
 The weighted binary cross entropy was used as a loss function. The weights were used to decrease the effect of unbalanced data. The weights were computed as normalized reverse frequencies of classes in the train data.
 
@@ -66,4 +66,4 @@ After several training trials we found that weighted loss does not fully prevent
 2) [Milestone2_wikidata](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/code/Milestone_2/Milestone2_wikidata.ipynb), which contains the work on the additional metadata on the speakers in the Quotebank dataset from milestone 2.
 3) [Data_Processing](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/code/Milestone_3/Data_Processing.ipynb) which contains additional datasets preparation, merging the occupations to the original data and graph plotting from Milestone 3.
 4) [Clusterization]()
-5) [Model](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/code/Milestone_3/Model.ipynb)
+5) [Model](https://github.com/epfl-ada/ada-2021-project-k-dim/blob/main/code/Milestone_3/Model.ipynb) which contains our model description, creating balanced train and test datasets and model training. 
