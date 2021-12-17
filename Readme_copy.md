@@ -36,6 +36,11 @@ Second, from the additional datasets we take only those people who has distinct 
 
 #### Clustering
 
+We clustered the occupations 4 times:
+1)	Into four main clusters: Research, Politics, Sport and Arts. This was done to check the performance of the model for the first time.
+2)	Into 20 clusters. They were created from most featured occupations in additional dataset.
+3)	20 clusters were reduced to 10 by merging the existed with similar ones. This was to check model behavior on less classes.
+4)	Into 10 by clusters using machine learning algorithm with the whole occupations list given.
 
 After obtaining clusterized occupations, we merge this information to the original quotes dataset and process it to the model.
 #### Model
