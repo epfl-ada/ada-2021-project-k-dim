@@ -31,11 +31,10 @@ First, we chose to filter out any quote whose qids.length != 1. On one hand we g
 
 Second, from the additional datasets we take only those people who has distinct occupation. This is for proper model training process, so it will be able to distinguish one job from another. Other rows with several occupations may be used for training, because the designed model will output probabilities of a person assigned to each of the cluster.
 
-After receiving clusterized occupations, we merge this information to the original quotes dataset and process it to the model.
-
 #### Clustering
 
 
+After obtaining clusterized occupations, we merge this information to the original quotes dataset and process it to the model.
 #### Model
 
 
