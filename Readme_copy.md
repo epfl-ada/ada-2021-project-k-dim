@@ -14,8 +14,8 @@ From this observation, we would like to see if it is possible to guess the profe
 ### Research Questions(To change!)
 
 A list of research questions we would like to address during the project:
-* Let's consider now Qids with multiple professions, we won't dive into a multiclass neural network but, by looking at the quotes of the person/year, is it possible to predict what profession the person was excercing _by this time_?
-* Can we use our model to assign a word, or collection of words to a class ? 
+* Is it possible to get the profession of the person based on his/her quotes?
+* What are the most cited occupation clusters in the journals?
 * Can we predict another target of a speaker: other features in the provided folder "speaker_attributes.parquet" (e.g. “nationality”, “gender”, etc)?
 
 
@@ -27,7 +27,9 @@ A list of research questions we would like to address during the project:
 ### Methods(To change what is below!)
 
 #### Pre-processing
-
+First, we chose to filter out any quote whose qids.length != 1. On one hand we get rid of the "homonym issue": James Fisher is not unique, which leads to many Qids. On the other hand, we deal with missing values: some speakers are "None". By doing so, we reduce the data size by 50%. For a full year, we have in average 22 million quotes. It then remains 11 million quotes per year, which should be enough.
+Second, from the additional datasets we take only those people who has distinct occupation. This is for proper model training process, so it will be able to distinguish one job from another. Other rows with several occupations may be used for training, because the designed model will output probabilities of a person assigned to each of the cluster.
+After receiving clusterized occupations, we merge this information to the original quotes dataset and process it to the model.
 
 #### Clustering
 
