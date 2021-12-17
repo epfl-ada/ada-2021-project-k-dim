@@ -51,8 +51,6 @@ The weighted binary cross entropy was used as a loss function. The weights were 
 
 For transformer-based models, it is convenient to use a schedular which changes learning rate during training to make training more smooth: smoothness increases the learning rate from zero to set value during warmup training period and smoothly decrease it to zero for last part of training. We used linear schedular with warmup period equals to first 10% of total training steps.
 
-After several training trials we found that weighted loss does not fully prevent overfitting to the most frequent classes. For training the final model, we decided to create fully balanced train and test datasets.
-
 
 ## Proposed timeline
 * week 1: Preparing the data to be clustered. Clustering the occupations. Model designing.
