@@ -45,7 +45,7 @@ Our "pre-processed" dataset has a `Qid` colum, D columns for the vectorized quot
 Eventually, we will take into consideration that we might encounter an unbalanced data issue, since we will have C+1 classes among the data.
 
 
-#### Proposed timeline
+### Proposed timeline
 * week 1: Preparing the data to be clustered. Clustering the occupations. Model designing.
 * week 2: Merging clustered data with original quotes. Implementing the model.
 * week 3: Model tuning. Writing the datastory. Updating Github repository.
